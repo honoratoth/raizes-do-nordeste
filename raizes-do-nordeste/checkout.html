@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar pedido | Raízes do Nordeste</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho"><a class="marca" href="index.html"><span class="marca-icone">🌿</span><span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span></a><a class="atalho-carrinho" href="carrinho.html">← Carrinho</a></header>
+  <main class="container pagina-conta">
+    <section class="boas-vindas"><p class="sobretitulo">QUASE LÁ</p><h1>Finalizar pedido</h1><p>Confira os dados e escolha como deseja simular o pagamento.</p></section>
+    <section class="cartao-formulario">
+      <h2>Resumo do pedido</h2><p id="clienteCheckout"></p><p><strong>Unidade para retirada:</strong> <span id="unidadeCheckout"></span></p>
+      <div id="resumoCheckout" class="resumo-checkout"></div>
+      <div class="linha-resumo"><span>Subtotal</span><strong id="subtotalCheckout">R$ 0,00</strong></div>
+      <section class="cartao-fidelidade-checkout">
+        <h3>🌟 Use seus pontos</h3><p>Você tem <strong id="pontosDisponiveisCheckout">0</strong> pontos disponíveis.</p>
+        <label class="opcao-adicional"><input id="usarPontos" type="checkbox"><span>Usar meus pontos como desconto</span></label>
+        <small>100 pontos = R$ 1,00 de desconto. Limite de 10% do pedido.</small>
+        <p id="descontoPontosCheckout">Desconto: R$ 0,00</p>
+      </section>
+      <section class="cartao-fidelidade-checkout">
+        <h3>🎟️ Cupom de desconto</h3>
+        <div class="grupo-campo"><label for="codigoCupom">Digite seu cupom</label><input id="codigoCupom" maxlength="20" placeholder="Ex.: RAIZES10" autocomplete="off"></div>
+        <button class="botao-secundario" type="button" id="aplicarCupom">Aplicar cupom</button>
+        <p id="mensagemCupom" class="mensagem-formulario" aria-live="polite"></p>
+        <p id="descontoCupomCheckout">Desconto do cupom: R$ 0,00</p>
+      </section>
+      <div class="linha-resumo total"><span>Total a pagar</span><strong id="totalCheckout">R$ 0,00</strong></div>
+    </section>
+    <form id="formCheckout" class="cartao-formulario formulario">
+      <h2>Forma de pagamento</h2>
+      <label class="opcao-adicional"><input id="metodoPix" type="radio" name="metodoPagamento" value="pix" checked><span>Pix</span><strong>Simulado</strong></label>
+      <label class="opcao-adicional"><input id="metodoCartao" type="radio" name="metodoPagamento" value="cartao"><span>Cartão</span><strong>Simulado</strong></label>
+      <div id="detalhesPix" class="aviso-seguranca">Na demonstração, a opção Pix apenas representa a escolha do método. Não será gerado QR Code nem haverá transferência.</div>
+      <div class="grupo-campo"><label for="resultadoSimulado">Resultado para teste</label><select id="resultadoSimulado"><option value="aprovado">Simular pagamento aprovado</option><option value="recusado">Simular pagamento recusado</option></select><small class="ajuda">Este seletor existe somente para testar os dois caminhos do protótipo.</small></div>
+      <p class="aviso-seguranca">Ambiente acadêmico: não informe número de cartão, código de segurança ou dados bancários. Nenhuma cobrança real é realizada.</p>
+      <p id="mensagemCheckout" class="mensagem-formulario" aria-live="polite"></p>
+      <button class="botao-principal" type="submit">Confirmar pedido</button>
+      <a class="botao-secundario" href="carrinho.html">Voltar ao carrinho</a>
+    </form>
+  </main>
+  <nav class="menu-inferior" aria-label="Navegação principal"><a href="index.html"><span>🏠</span>Início</a><a href="index.html#filtrosCategorias"><span>🍽️</span>Cardápio</a><a href="carrinho.html"><span>🛒</span>Carrinho</a><a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html" aria-label="Painel da cozinha"><span>👩‍🍳</span>Cozinha</a><a href="admin.html" aria-label="Painel administrativo"><span>⚙️</span>Gerência</a><a href="conta.html" id="linkConta"><span>👤</span>Conta</a></nav>
+  <script src="js/app.js"></script>
+</body></html>

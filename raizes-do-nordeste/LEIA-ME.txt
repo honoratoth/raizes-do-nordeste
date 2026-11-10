@@ -1,0 +1,116 @@
+RAÍZES DO NORDESTE — ETAPA 3
+
+Como executar:
+1. Extraia a pasta do projeto.
+2. Abra a pasta raizes-do-nordeste no Visual Studio Code.
+3. Abra index.html e execute com a extensão Live Server.
+4. Selecione uma unidade antes de personalizar e adicionar produtos.
+
+Arquivos principais:
+- index.html: página inicial e cardápio.
+- produto.html: tela de personalização dos produtos.
+- carrinho.html: resumo dos itens personalizados.
+- cadastro.html, login.html e conta.html: área demonstrativa do cliente.
+- css/style.css: aparência e responsividade.
+- js/app.js: lógica do catálogo, personalização, carrinho e conta.
+
+Nesta etapa, os produtos, unidades, complementos e preços são fictícios para fins acadêmicos. Os dados ficam no localStorage do navegador. Não use dados pessoais reais nem senhas reais. Não há backend nem pagamento real.
+
+
+ETAPA 4 - CHECKOUT DEMONSTRATIVO
+- Abra index.html pelo Live Server.
+- Adicione produtos, entre com uma conta de teste e abra o carrinho.
+- Clique em Continuar pedido para abrir checkout.html.
+- Escolha Pix ou cartão (ambos simulados).
+- Use o seletor de resultado para testar aprovação e recusa.
+- Na recusa, o carrinho permanece salvo e é possível tentar novamente.
+- Na aprovação, o pedido é salvo no navegador, o carrinho é limpo e abre confirmacao.html.
+- Nenhum pagamento real é processado; não informe dados bancários ou de cartão.
+
+
+ETAPA 5 — ACOMPANHAMENTO E COZINHA
+- pedidos.html: lista de pedidos da conta conectada.
+- acompanhar.html: linha do tempo do pedido selecionado.
+- cozinha.html: painel demonstrativo para avançar os status dos pedidos.
+- Na tela de confirmação, use “Acompanhar meus pedidos” ou “Abrir painel da cozinha”.
+- O painel é apenas uma simulação local: os dados ficam no localStorage deste navegador e não sincronizam entre dispositivos.
+- Para testar: confirme um novo pedido, abra o painel da cozinha, avance os status e depois atualize a página de acompanhamento do cliente.
+
+
+ATUALIZAÇÃO DE NAVEGAÇÃO (Etapa 5.1)
+Foi incluído o atalho “Pedidos” no menu inferior de todas as páginas. Assim, o cliente pode voltar à lista de pedidos e abrir novamente o acompanhamento sem precisar criar um novo pedido. A tela “Minha conta” também mantém o botão “Meus pedidos”.
+
+
+ATUALIZAÇÃO DE NAVEGAÇÃO (Etapa 5.2)
+- Foi incluído o atalho “Cozinha” (👩‍🍳) no menu inferior de todas as páginas.
+- O painel da cozinha pode ser aberto a qualquer momento por cozinha.html, sem precisar criar um novo pedido.
+- O atalho é para demonstração acadêmica; não existe autenticação ou autorização de funcionários nesta versão.
+
+
+ETAPA 7 — PROGRAMA DE FIDELIDADE
+- Acesse Minha conta e abra Minha carteira de pontos.
+- Cada R$ 1,00 efetivamente pago gera 1 ponto (arredondamento para baixo).
+- 100 pontos equivalem a R$ 1,00 de desconto no checkout.
+- O resgate é limitado a 10% do subtotal do pedido.
+- Os pontos usados são debitados somente após pagamento aprovado; em caso de recusa, saldo e carrinho são preservados.
+- O histórico registra pontos ganhos e utilizados.
+- Dados demonstrativos armazenados no localStorage deste navegador; não são pontos com valor financeiro real.
+
+
+ATUALIZAÇÃO — INGREDIENTES EXTRAS
+No painel admin.html, ao cadastrar ou editar um produto, use “Adicionar ingrediente extra”.
+Informe nome e preço (use 0 para um extra gratuito). Salve o produto.
+Os extras cadastrados passam a aparecer na tela de personalização daquele produto,
+com atualização automática do preço e inclusão no carrinho.
+
+
+ETAPA 8 — CUPONS E PRIVACIDADE
+- No admin.html, cadastre promoção com código e desconto percentual (1 a 90%).
+- No checkout.html, aplique o cupom. O código é vinculado à unidade.
+- O cadastro solicita ciência do Aviso de Privacidade (privacidade.html).
+
+PLANO DE TESTES SUGERIDO
+1. Cadastro sem aceitar o aviso: deve impedir o cadastro.
+2. Abrir o Aviso de Privacidade pelo cadastro.
+3. Cadastrar promoção com cupom e percentual válido.
+4. Tentar salvar percentual fora de 1 a 90: deve alertar.
+5. Aplicar cupom válido da mesma unidade: deve calcular desconto.
+6. Aplicar cupom inexistente: deve informar inválido.
+7. Aplicar cupom de outra unidade: deve recusar.
+8. Combinar cupom e pontos: pontos limitados a 10% após cupom.
+9. Pagamento recusado: carrinho e pontos permanecem.
+10. Pagamento aprovado: pedido registra cupom e descontos.
+
+Protótipo local: sem backend, autenticação segura ou integração financeira.
+
+
+CORREÇÃO — ETAPA 8.1
+Foi incluído no checkout o campo visual de cupom que faltava. A ausência desses elementos fazia o JavaScript tentar registrar o clique em um botão inexistente, interrompendo o script e impedindo a confirmação do pedido. O checkout agora contém os campos e validações correspondentes; também há proteção para não interromper a finalização caso algum elemento opcional não esteja presente.
+O formulário de promoção inclui descrição e percentual do cupom.
+
+
+ETAPA 8.2 — AJUSTE DE LEITURA
+- Os tamanhos definidos em font-size no CSS foram aumentados em 1 px.
+- Os valores responsivos em clamp() também receberam o mesmo ajuste de 1 px em cada medida.
+- Confira as páginas em desktop e celular para validar que textos, botões e cartões continuam bem distribuídos.
+
+CHECKLIST DE FINALIZAÇÃO
+1. Cadastro: campos obrigatórios, e-mail inválido, senha curta, confirmação diferente e aceite de privacidade.
+2. Login: credenciais corretas e incorretas; destino após login.
+3. Unidade: selecionar unidade e impedir mistura de itens de unidades diferentes.
+4. Cardápio: busca, categorias, disponibilidade e personalização de adicionais.
+5. Carrinho: alterar quantidades, remover itens e manter dados ao voltar.
+6. Checkout: cupom válido, inválido e de outra unidade; desconto e total.
+7. Fidelidade: saldo insuficiente, resgate válido e limite de 10%.
+8. Pagamento simulado: aprovação e recusa; na recusa, preservar carrinho e pontos.
+9. Pedido: confirmação, histórico, acompanhamento e atualização de status pela cozinha.
+10. Administração: cadastrar/editar produtos e promoções e conferir unidade administrada.
+11. Responsividade: testar telas estreitas e largas; verificar leitura, navegação e botões.
+12. Privacidade: confirmar aviso claro e coleta mínima de dados.
+
+LIMITAÇÕES IMPORTANTES PARA A APRESENTAÇÃO
+- Esta é uma demonstração front-end com dados fictícios e armazenamento local (localStorage).
+- Cadastro e login não são autenticação segura de produção; não usar senhas nem dados pessoais reais.
+- Não há banco de dados central, sincronização entre dispositivos ou controle real de permissões por perfil.
+- Pagamentos Pix e cartão são simulados; nenhuma transação financeira é realizada.
+- Para uma operação real, seria necessário backend, autenticação segura, banco de dados e integração com provedor de pagamento.

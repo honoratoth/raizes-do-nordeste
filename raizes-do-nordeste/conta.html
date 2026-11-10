@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha conta | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="index.html"><span class="marca-icone">🌿</span><span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span></a>
+    <a class="atalho-carrinho" href="carrinho.html">🛒 Carrinho</a>
+  </header>
+  <main class="container pagina-conta">
+    <section class="boas-vindas"><p class="sobretitulo">SUA ÁREA</p><h1>Minha conta</h1><p>Consulte seus dados e gerencie seu acesso.</p></section>
+    <section class="cartao-conta" id="areaLogada" hidden>
+      <h2 id="saudacaoCliente">Olá!</h2><p>Você está conectado à sua conta.</p>
+      <div class="dados-cliente">
+        <div class="dado-cliente"><small>Nome completo</small><strong id="contaNome"></strong></div>
+        <div class="dado-cliente"><small>E-mail</small><strong id="contaEmail"></strong></div>
+        <div class="dado-cliente"><small>Telefone</small><strong id="contaTelefone"></strong></div>
+      </div>
+      <div class="cartao-pontos-conta"><small>🌟 Programa de fidelidade</small><strong id="saldoPontosConta">0 pontos</strong><p>Junte pontos a cada compra e troque por descontos.</p><a class="botao-secundario" href="fidelidade.html">Ver minha carteira</a></div>
+      <div class="acoes-conta"><a class="botao-principal" href="pedidos.html">Meus pedidos</a><a class="botao-secundario" href="index.html">Explorar cardápio</a><button class="botao-secundario" type="button" id="botaoSair">Sair da conta</button></div>
+    </section>
+    <section class="cartao-conta" id="areaVisitante">
+      <h2>Bem-vindo(a)!</h2><p>Entre na sua conta ou faça seu cadastro para continuar.</p>
+      <div class="acoes-conta"><a class="botao-principal" href="login.html">Entrar</a><a class="botao-secundario" href="cadastro.html">Criar cadastro</a></div>
+    </section>
+    <a class="link-voltar" href="index.html">← Voltar ao cardápio</a>
+  </main>
+  <nav class="menu-inferior" aria-label="Navegação principal">
+    <a href="index.html"><span>🏠</span>Início</a><a href="index.html#filtrosCategorias"><span>🍽️</span>Cardápio</a><a href="carrinho.html"><span>🛒</span>Carrinho</a><a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html" aria-label="Painel da cozinha"><span>👩‍🍳</span>Cozinha</a><a class="selecionado" href="conta.html"><span>👤</span>Conta</a>
+  </nav>
+  <script src="js/app.js"></script>
+</body>
+</html>

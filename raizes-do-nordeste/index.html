@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cardápio demonstrativo da Rede Raízes do Nordeste.">
+  <title>Raízes do Nordeste | Início</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="index.html" aria-label="Raízes do Nordeste - início">
+      <span class="marca-icone">🌿</span>
+      <span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span>
+    </a>
+    <a class="atalho-carrinho" href="carrinho.html">🛒 Carrinho <span id="contadorCarrinho">0</span></a>
+  </header>
+
+  <main class="container">
+    <section class="boas-vindas">
+      <p class="sobretitulo">SABORES QUE APROXIMAM</p>
+      <h1>Bem-vindo à nossa casa!</h1>
+      <p>Escolha sua unidade e descubra nossos sabores.</p>
+    </section>
+
+    <section class="secao unidade">
+      <label for="unidade"><strong>Onde deseja fazer seu pedido?</strong></label>
+      <select id="unidade">
+        <option value="">Selecione uma unidade</option>
+        <option value="centro">Unidade Centro</option>
+        <option value="praia">Unidade Praia</option>
+      </select>
+      <p class="ajuda">A unidade selecionada será vinculada ao seu carrinho.</p>
+    </section>
+
+    <section class="secao">
+      <label class="sr-only" for="buscaProduto">Buscar produtos</label>
+      <input id="buscaProduto" class="campo-busca" type="search" placeholder="🔎 O que você está procurando?">
+    </section>
+
+    <section class="secao">
+      <div class="titulo-secao">
+        <div><p class="sobretitulo">OFERTAS DA CASA</p><h2>Sabores e novidades</h2></div>
+      </div>
+      <div class="banner">
+        <span class="banner-emoji">☀️</span>
+        <div><h3>Um sabor especial espera por você!</h3><p>Confira nosso cardápio e aproveite.</p></div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="titulo-secao"><div><p class="sobretitulo">PARA TODOS OS GOSTOS</p><h2>Explore o cardápio</h2></div></div>
+      <div class="categorias" id="filtrosCategorias">
+        <button class="filtro ativo" type="button" data-categoria="todos">Todos</button>
+        <button class="filtro" type="button" data-categoria="pratos">🍛 Pratos</button>
+        <button class="filtro" type="button" data-categoria="salgados">🥟 Salgados</button>
+        <button class="filtro" type="button" data-categoria="sobremesas">🍰 Sobremesas</button>
+        <button class="filtro" type="button" data-categoria="bebidas">🥤 Bebidas</button>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="titulo-secao"><div><p class="sobretitulo">FEITO COM CARINHO</p><h2>Nosso cardápio</h2></div></div>
+      <div class="grade-produtos" id="listaProdutos" aria-live="polite"></div>
+      <p class="mensagem-vazia" id="mensagemVazia" hidden>Nenhum produto encontrado. Tente outra busca ou categoria.</p>
+    </section>
+    <p class="aviso-demo">Projeto acadêmico demonstrativo. Produtos, unidades e preços são fictícios e podem ser alterados.</p>
+  </main>
+
+  <nav class="menu-inferior" aria-label="Navegação principal">
+    <a class="selecionado" href="index.html"><span>🏠</span>Início</a>
+    <a href="#filtrosCategorias"><span>🍽️</span>Cardápio</a>
+    <a href="carrinho.html"><span>🛒</span>Carrinho</a>
+    <a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html" aria-label="Painel da cozinha"><span>👩‍🍳</span>Cozinha</a><a href="admin.html" aria-label="Painel administrativo"><span>⚙️</span>Gerência</a><a href="conta.html" id="linkConta"><span>👤</span>Conta</a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

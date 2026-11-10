@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu carrinho | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="index.html"><span class="marca-icone">🌿</span><span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span></a>
+    <a class="atalho-carrinho" href="index.html">← Cardápio</a>
+  </header>
+
+  <main class="container pagina-carrinho">
+    <section class="boas-vindas">
+      <p class="sobretitulo">SEU PEDIDO</p>
+      <h1>Meu carrinho 🛒</h1>
+      <p>Confira os itens antes de continuar.</p>
+    </section>
+
+    <div class="unidade-resumo" id="resumoUnidade"></div>
+    <section id="itensCarrinho" class="itens-carrinho" aria-live="polite"></section>
+
+    <section class="resumo-pedido" id="resumoPedido">
+      <div class="linha-resumo"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+      <div class="linha-resumo total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+      <button class="botao-principal" id="botaoContinuar" type="button">Continuar pedido</button>
+      <p class="ajuda">Pagamento demonstrativo. Nenhuma cobrança real será realizada.</p>
+    </section>
+    <a class="link-voltar" href="index.html">← Voltar ao cardápio</a>
+  </main>
+
+  <nav class="menu-inferior" aria-label="Navegação principal">
+    <a href="index.html"><span>🏠</span>Início</a>
+    <a href="index.html#filtrosCategorias"><span>🍽️</span>Cardápio</a>
+    <a class="selecionado" href="carrinho.html"><span>🛒</span>Carrinho</a>
+    <a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html" aria-label="Painel da cozinha"><span>👩‍🍳</span>Cozinha</a><a href="admin.html" aria-label="Painel administrativo"><span>⚙️</span>Gerência</a><a href="conta.html" id="linkConta"><span>👤</span>Conta</a>
+  </nav>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes do Nordeste | Administração</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="cabecalho"><a class="marca" href="index.html"><span class="marca-icone">🌿</span><span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span></a></header>
+<main class="container pagina-conta" id="painelAdmin">
+  <section class="boas-vindas"><p class="sobretitulo">ÁREA DO GERENTE</p><h1>Painel administrativo</h1><p>Gerencie o catálogo e as promoções da sua unidade.</p></section>
+  <section class="cartao-formulario">
+    <div class="grupo-campo"><label for="unidadeAdmin">Unidade administrada</label><select id="unidadeAdmin"><option value="centro">Unidade Centro</option><option value="praia">Unidade Praia</option></select></div>
+    <p class="aviso-seguranca">Demonstração acadêmica: a seleção representa o gerente de cada unidade. Ainda não existe autenticação ou bloqueio real de acesso por perfil.</p>
+  </section>
+  <section class="secao"><h2>Indicadores da unidade</h2><div class="indicadores-admin">
+    <article class="indicador-admin"><small>Pedidos registrados</small><strong id="indicadorPedidos">0</strong></article>
+    <article class="indicador-admin"><small>Vendas de pedidos entregues</small><strong id="indicadorVendas">R$ 0,00</strong></article>
+    <article class="indicador-admin"><small>Produtos no catálogo</small><strong id="indicadorProdutos">0</strong></article>
+  </div></section>
+  <section class="cartao-formulario"><h2 id="tituloFormProduto">Cadastrar produto</h2><p>Os produtos cadastrados ficam vinculados à unidade selecionada.</p>
+    <form id="formProdutoAdmin" class="formulario">
+      <div class="grupo-campo"><label>Nome do produto</label><input name="nome" required maxlength="70" placeholder="Ex.: Baião de dois"></div>
+      <div class="grupo-campo"><label>Descrição</label><input name="descricao" required maxlength="140" placeholder="Descreva o produto"></div>
+      <div class="grupo-campo"><label>Preço (R$)</label><input name="preco" type="number" min="0.01" step="0.01" required placeholder="25,00"></div>
+      <div class="grupo-campo"><label>Categoria</label><select name="categoria"><option value="pratos">Pratos</option><option value="salgados">Salgados</option><option value="sobremesas">Sobremesas</option><option value="bebidas">Bebidas</option></select></div>
+      <div class="grupo-campo"><label>Ícone/emoji</label><input name="imagem" maxlength="8" placeholder="🍛"></div>
+      <div class="grupo-campo"><label>Unidade do produto</label><select name="unidadeProduto"><option value="centro">Unidade Centro</option><option value="praia">Unidade Praia</option><option value="todas">Todas as unidades</option></select></div>
+      <section class="grupo-campo" aria-labelledby="tituloAdicionaisAdmin">
+        <label id="tituloAdicionaisAdmin">Ingredientes extras / adicionais</label>
+        <p class="texto-ajuda">Cadastre os extras disponíveis para este produto e o preço de cada um. Ex.: queijo extra — R$ 3,00.</p>
+        <div id="linhasAdicionaisAdmin" class="formulario"></div>
+        <button class="botao-secundario" type="button" id="adicionarLinhaAdicional">＋ Adicionar ingrediente extra</button>
+      </section>
+      <label class="opcao-adicional"><input name="disponivel" type="checkbox" checked><span>Produto disponível para venda</span></label>
+      <button class="botao-principal" type="submit">Cadastrar produto</button><p id="mensagemAdmin" class="mensagem-formulario" aria-live="polite"></p>
+    </form>
+  </section>
+  <section class="secao"><h2>Produtos da unidade</h2><div id="listaAdminProdutos" class="lista-admin"></div></section>
+  <section class="cartao-formulario"><h2>Promoções e cupons</h2><p>Cadastre campanhas demonstrativas para a unidade selecionada.</p>
+    <form id="formPromocaoAdmin" class="formulario">
+      <div class="grupo-campo"><label>Título da promoção</label><input name="titulo" required maxlength="70" placeholder="Ex.: Combo regional"></div>\n      <div class="grupo-campo"><label>Descrição da promoção</label><input name="descricao" maxlength="120" placeholder="Ex.: 10% de desconto no pedido"></div>
+      <div class="grupo-campo"><label>Descrição</label><input name="descricao" required maxlength="140" placeholder="Ex.: Desconto especial no almoço"></div>
+      <div class="grupo-campo"><label>Cupom (opcional)</label><input name="cupom" maxlength="20" placeholder="RAIZES10"></div>
+      <div class="grupo-campo"><label>Desconto do cupom (%)</label><input name="desconto" type="number" min="1" max="90" step="1" placeholder="10"></div>
+      <button class="botao-principal" type="submit">Cadastrar promoção</button>
+    </form><div id="listaPromocoesAdmin" class="lista-admin"></div>
+  </section>
+  <p class="aviso-demo">Dados salvos apenas neste navegador via localStorage. Não há banco de dados ou controle de acesso real.</p>
+</main>
+<nav class="menu-inferior" aria-label="Navegação principal"><a href="index.html"><span>🏠</span>Início</a><a href="index.html#filtrosCategorias"><span>🍽️</span>Cardápio</a><a href="carrinho.html"><span>🛒</span>Carrinho</a><a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html"><span>👩‍🍳</span>Cozinha</a><a href="admin.html" class="selecionado"><span>⚙️</span>Gerência</a><a href="conta.html"><span>👤</span>Conta</a></nav>
+<script src="js/app.js"></script>
+</body></html>

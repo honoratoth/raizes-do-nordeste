@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personalize seu pedido no Raízes do Nordeste.">
+  <title>Personalizar produto | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="index.html"><span class="marca-icone">🌿</span><span><strong>Raízes do Nordeste</strong><small>Tradição que acolhe</small></span></a>
+    <a class="atalho-carrinho" href="carrinho.html">🛒 Carrinho <span id="contadorCarrinho">0</span></a>
+  </header>
+
+  <main class="container pagina-conta" id="areaPersonalizacao">
+    <section class="boas-vindas">
+      <p class="sobretitulo">DO SEU JEITO</p>
+      <h1>Personalize seu pedido</h1>
+      <p>Escolha seus adicionais e conte como prefere.</p>
+    </section>
+
+    <section class="cartao-formulario">
+      <div class="produto-detalhe-imagem" id="produtoEmoji">🍽️</div>
+      <h2 id="produtoNome">Produto</h2>
+      <p id="produtoDescricao"></p>
+      <p class="preco-base">A partir de <strong id="produtoPrecoBase"></strong></p>
+
+      <div class="bloco-personalizacao">
+        <h3>Quer adicionar algo?</h3>
+        <p class="ajuda">Marque os complementos desejados. Os valores são demonstrativos.</p>
+        <div id="listaAdicionais" class="lista-adicionais"></div>
+      </div>
+
+      <div class="bloco-personalizacao">
+        <label class="grupo-campo" for="observacaoProduto">Observações do pedido
+          <textarea id="observacaoProduto" rows="3" maxlength="180" placeholder="Ex.: sem cebola, molho à parte..."></textarea>
+        </label>
+      </div>
+
+      <div class="bloco-personalizacao">
+        <label class="grupo-campo" for="quantidadeProduto">Quantidade
+          <input id="quantidadeProduto" type="number" min="1" max="20" value="1">
+        </label>
+      </div>
+
+      <div class="preco-final"><span>Preço por unidade</span><strong id="produtoPrecoFinal">R$ 0,00</strong></div>
+      <button class="botao-principal" id="botaoAdicionarPersonalizado" type="button">Adicionar ao carrinho</button>
+      <p id="mensagemProduto" class="mensagem-formulario" aria-live="polite"></p>
+      <a class="link-voltar" href="index.html">← Voltar ao cardápio</a>
+    </section>
+  </main>
+
+  <nav class="menu-inferior" aria-label="Navegação principal">
+    <a href="index.html"><span>🏠</span>Início</a>
+    <a href="index.html#filtrosCategorias"><span>🍽️</span>Cardápio</a>
+    <a href="carrinho.html"><span>🛒</span>Carrinho</a>
+    <a href="pedidos.html"><span>🧾</span>Pedidos</a><a href="cozinha.html" aria-label="Painel da cozinha"><span>👩‍🍳</span>Cozinha</a><a href="admin.html" aria-label="Painel administrativo"><span>⚙️</span>Gerência</a><a href="conta.html" id="linkConta"><span>👤</span>Conta</a>
+  </nav>
+  <script src="js/app.js"></script>
+</body>
+</html>
